@@ -1,10 +1,12 @@
 {
   "name": "new-edu",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node ./src/app.ts",
+    "start": "node ./dist/app.js",
+    "build": "run-s build:* -l",
+    "build:server": "tsc",
     "build:client": "cd client && yarn build",
     "dev:server": "nodemon ./src/app.ts",
     "dev:client": "cd client && yarn start",

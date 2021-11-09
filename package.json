@@ -1,0 +1,24 @@
+{
+  "name": "new-edu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/app.ts",
+    "build:client": "cd client && yarn build",
+    "dev:server": "nodemon ./src/app.ts",
+    "dev:client": "cd client && yarn start",
+    "dev": "run-p dev:* -l",
+    "postinstall": "cd client && yarn install"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.14"
+  }
+}
